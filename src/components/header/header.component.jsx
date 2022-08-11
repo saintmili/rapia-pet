@@ -7,9 +7,9 @@ import './header.styles.css';
 
 export const Header = (props) => {
     return (
-        <div className='header'>
+        <header className='header'>
             <NavBar />
             <Menu />
-        </div>
+        </header>
     )
 }

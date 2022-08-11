@@ -136,9 +136,7 @@ const newProducts = [
 export default function HomePage() {
     return (
         <div className="homepage">
-            <header className="header">
-                <Header />
-            </header>
+            <Header />
             <section className='section-1'>
                 <div className='section-1-title'>
                     <h1>رآبیا<span>پت</span>:</h1>
@@ -153,7 +151,7 @@ export default function HomePage() {
                 </div>
                 <img className='section-1-img' src={pou} alt='pet' />
             </section>
-            <Category />
+            <Category type="a"/>
             <Offer title="تخفیف های امروز" categories={discounts} />
             <div className="online-vet">
                 <div className="online-vet-title">مشاوره دامپزشکی آنلاین</div>
@@ -168,6 +166,7 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
+            <Category type="b" title="لوازم ضروری سگ"/>
             <Offer title="آخرین محصولات" products={newProducts} />
         </div>
     );

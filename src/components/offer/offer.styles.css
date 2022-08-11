@@ -1,28 +1,41 @@
+.offer {
+    padding: 2vw 4vw;
+}
 .offer-title {
     text-align: center;
     margin: auto;
     padding: 1vw;
     background-color: var(--color-blue-primary);
     width: max-content;
-    border-radius: 1vw;
+    border-radius: 2vw 2vw 1vw 1vw;
     color: var(--color-white-original);
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin-bottom: 1vw;
 }
 
 .offer-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: max-content;
-    gap: 10vw;
+    justify-content: center;
     margin: auto;
+    width: 40vw;
     border-bottom: 1px solid var(--color-black-primary);
     font-size: 2vw;
+    padding: 0 2vw;
 }
+.offer-header:nth-child(1) {
+    margin-left: auto;
+}
+.offer-header-item:nth-child(2) {
+    position: absolute;
+}
+.offer-header-item:nth-child(3) {
+    margin-right: auto;
+}
+
+
 .offer-header-item {
     font-size: 1.5vw;
-    padding: 1vw;
 }
 .offer-header-item:hover {
     color: var(--color-blue-primary);
@@ -36,5 +49,5 @@
     justify-content: space-between;
     gap: 1vw;
     width: 100%;
-    padding: 0 4vw;
+    margin-top: 2vw;
 }

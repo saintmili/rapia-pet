@@ -1,0 +1,7 @@
+.custom-button {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+}

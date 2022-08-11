@@ -1,0 +1,21 @@
+:root {
+  --color-green-primary: #1BA107;
+  --color-blue-primary: #512FFF;
+  --color-white-primary: #f5f5f5;
+  --color-white-secondary: #f9f9f9;
+  --color-white-original: #ffffff;
+  --color-orange-primary: #F96120;
+  --color-black-primary: #000000;
+  --color-gray-primary: #A897FF;
+}
+.rabia-pet {
+  direction: rtl;
+  text-align: right;
+  background-color: var(--color-white-primary);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

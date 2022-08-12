@@ -167,6 +167,8 @@ export default function HomePage() {
                 </div>
             </div>
             <Category type="b" title="لوازم ضروری سگ"/>
+            <Category type="c" title="جدیدترین محصولات رآبیاپت"/>
+            {/* <Category type="c" title="آخرین مقالات"/> */}
             <Offer title="آخرین محصولات" products={newProducts} />
         </div>
     );

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ProductItem } from "../product-item/product-item.component";
+
 import img1 from '../../assets/img1.png';
 import img2 from '../../assets/img2.png';
 import img3 from '../../assets/img3.png';
@@ -52,64 +54,95 @@ export const Category = (props) => {
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 2,
         },
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 3,
         },
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 4,
         },
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 5,
         },
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 6,
         },
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 7,
         },
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 8,
         },
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 9,
         },
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 10,
         },
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 11,
         },
         {
             title: 'قلاده کمری',
             img: img7,
-            id: 1,
+            id: 12,
         }
     ]
+    const LAST_PRODUCTS = [
+        {
+            title: 'غذای خشک سگ',
+            img: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            price: "9999",
+            discount: "",
+            id: 1
+        },
+        {
+            title: 'غذای خشک سگ',
+            img: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            price: "9999",
+            discount: "",
+            id: 2
+        },
+        {
+            title: 'غذای خشک سگ',
+            img: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            price: "9999",
+            discount: "",
+            id: 3
+        },
+        {
+            title: 'غذای خشک سگ',
+            img: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            price: "9999",
+            discount: "",
+            id: 4
+        }
+    ];
     return (
         <div className="category">
             {props.title ? <div className="category-title">{props.title}</div> : ""}
             <div className="category-items">
-                { props.type === "a" ?
+                { props.type === "a" 
+                    ?
                     CATEGORY_A.map(category => (
                         <div className="category-circular" key={category.id}>
                             <div className='category-item-img'>
@@ -117,15 +150,20 @@ export const Category = (props) => {
                             </div>
                             <div className='category-item-title'>{category.title}</div>
                         </div> 
-                    ))
-                    : CATEGORY_B.map(category => (
-                        <div className="category-square">
+                    )) : 
+                    props.type === "b" ? CATEGORY_B.map(category => (
+                        <div className="category-square" key={category.id}>
                             <div className="category-item-img">
                                 <img src={category.img} alt='pet' />
                             </div>
                             <div className="category-item-title">{category.title}</div>
                         </div>
-                    ))
+                    )) :
+                    props.type === "c" ? LAST_PRODUCTS.map(product => (
+                        <div className="last-products-item" key={product.id}>
+                            <ProductItem props={product} />
+                        </div>
+                    )) : ""
                 }
             </div>
         </div>

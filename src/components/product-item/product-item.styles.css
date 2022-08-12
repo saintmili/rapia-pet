@@ -3,10 +3,9 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    width: 22vw;
-    height: 25vw;
-    margin: 1vw;
-    margin-top: 3vw;
+    width: 100%;
+    height: 90%;
+    margin-top: 10%;
     border-radius: 5%;
     text-align: center;
     box-shadow: 0 0 1vw 0.3vw var(--color-gray-primary);

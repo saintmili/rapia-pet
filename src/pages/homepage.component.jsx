@@ -10,6 +10,7 @@ import vet from '../assets/vet.svg';
 import img1 from '../assets/img1.png';
 
 import './homepage.styles.css';
+import { useEffect } from "react";
 
 const discounts = [
     {
@@ -134,6 +135,28 @@ const newProducts = [
 ];
 
 export default function HomePage() {
+
+    useEffect(() => {
+        const baseURL = 'http://localhost:5000/api/v1/auth/login';
+        fetch(baseURL, {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: "test",
+                password: "test"
+            })
+        })
+            .then(resp => resp.json())
+            .then(data => displayData(data));
+
+        function displayData(data) {
+            console.log(data.accessToken);
+        }
+    }, [])
+
     return (
         <div className="homepage">
             <Header />

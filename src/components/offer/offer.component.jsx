@@ -28,10 +28,10 @@ class Offer extends React.Component {
                 <div className='offer-items'>
                     {this.props.categories
                         ?
-                        this.props.categories.filter(category => category.id === this.state.selectedOfferId).map(category => category.items.map(item => <div className="offer-item"><ProductItem key={item.id} props={item} /></div>))
+                        this.props.categories.filter(category => category.id === this.state.selectedOfferId).map(category => category.items.map(item => <div className="offer-item" key={item.id}><ProductItem key={item.id} props={item} /></div>))
                         : this.props.products 
                             ?
-                            this.props.products.map(item => <div className="offer-item"><ProductItem key={item.id} props={item} /></div>)
+                            this.props.products.map(item => <div className="offer-item" key={item.id}><ProductItem key={item.id} props={item} /></div>)
                             : 
                             ""
                         }

@@ -2,7 +2,7 @@ import React from "react";
 
 import './product-item.styles.css';
 
-export const ProductItem = ({props}) => (
+const ProductItem = ({props}) => (
     <div className='product-item'>
         <div className='product-item-img'>
             <img src={props.img} alt='pet' />
@@ -14,3 +14,6 @@ export const ProductItem = ({props}) => (
         </div>
     </div>
 )
+
+
+export default ProductItem;

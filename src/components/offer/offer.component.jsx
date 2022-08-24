@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ProductItem } from "../product-item/product-item.component";
+import ProductItem from "../product-item/product-item.component";
 
 import "./offer.styles.css";
 

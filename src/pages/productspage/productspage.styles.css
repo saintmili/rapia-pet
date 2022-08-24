@@ -1,0 +1,10 @@
+.products-page-container {
+    width: 100%;
+    display: flex;
+    gap: 2vw;
+    padding: 1vw 4vw;
+}
+.products-page-product {
+    width: 12vw;
+    height: 15vw;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ProductItem } from "../product-item/product-item.component";
+import ProductItem from "../product-item/product-item.component";
 
 import img1 from '../../assets/img1.png';
 import img2 from '../../assets/img2.png';

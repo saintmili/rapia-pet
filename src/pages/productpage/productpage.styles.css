@@ -1,0 +1,16 @@
+.game-page-container {
+    width: 100%;
+}
+.game-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-page-header-img-container {
+    width: 12vw;
+    height: 15vw;
+    background-color: red;
+}
+.product-page-header-summarize {
+    display: block;
+}

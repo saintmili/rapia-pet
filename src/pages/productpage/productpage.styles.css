@@ -1,16 +1,48 @@
 .game-page-container {
     width: 100%;
 }
+.product-page-container > * {
+    padding: 0 4vw;
+}
 .game-page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .product-page-header-img-container {
-    width: 12vw;
-    height: 15vw;
+    width: 20vw;
+    height: 20vw;
     background-color: red;
 }
 .product-page-header-summarize {
-    display: block;
+    display: flex;
+    flex-direction: column;
+}
+.product-page-header-boardcrump {
+    color: var(--color-gray-primary);
+}
+.product-page-header-cart-title {
+    color: var(--color-gray-primary);
+    background-color: var(--color-white-secondary);
+    padding: 0.5vw;
+    border-radius: 0.5vw;
+}
+.product-page-header-cart-container {
+    border-radius: 1vw;
+    border: 2px solid var(--color-blue-primary);
+}
+.product-page-header-cart-container-price {
+    color: var(--color-green-primary);
+    text-align: center;
+}
+.product-page-header-cart-container-addtocart {
+    margin: auto;
+}
+.product-page-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-page-menu-item {
+    margin: 0 1vw;
 }

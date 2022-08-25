@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Category from "../components/category/category.component";
 import Offer from "../components/offer/offer.component";
@@ -171,7 +172,7 @@ const HomePage = (props) => {
                 <div className='section-1-content'>
                     <p>لوازم ضروری و غیر ضروری سگ رو با بهترین قیمت در رآبیاپت پیدا کنید و بخرید</p>
                     <div className="section-1-btns">
-                        <CustomButton backgroundColor='var(--color-blue-primary)' color='var(--color-white-original)'><img src={product} alt="product" style={{width: "1vw", height: "1vw", marginLeft: "0.5vw"}} />مشاهده محصولات</CustomButton>
+                        <Link to="/products" style={{textDecoration: "none"}}><CustomButton backgroundColor='var(--color-blue-primary)' color='var(--color-white-original)'><img src={product} alt="product" style={{width: "1vw", height: "1vw", marginLeft: "0.5vw"}} />مشاهده محصولات</CustomButton></Link>
                         <CustomButton backgroundColor='var(--color-black-primary)' color='var(--color-white-original)'><img src={vet} alt="vet" style={{width: "1vw", height: "1vw", marginLeft: "0.5vw", color: "var(--color-white-original)"}} />رزرو نوبت پزشکی</CustomButton>
                     </div>
                 </div>

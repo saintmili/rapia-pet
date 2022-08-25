@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { SearchField } from "../search-field/search-field.component";
 import logo from "../../assets/logo.svg";
@@ -41,7 +42,9 @@ export const NavBar = (props) => {
           </div>
         </div>
         <div className="navbar-section-center">
-          <img src={logo} alt="logo" className='logo' />
+          <Link to="/">
+            <img src={logo} alt="logo" className='logo' />
+          </Link>
         </div>
         <div className="navbar-section-left">
           <SearchField placeholder='جستجو: غذا خشک سگ' />

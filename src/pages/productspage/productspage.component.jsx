@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux/es/exports";
+import { Link } from "react-router-dom";
 
 import { setProducts } from "../../redux/products/products.actions";
 
 import Header from "../../components/header/header.component";
 import ProductItem from "../../components/product-item/product-item.component";
 import './productspage.styles.css';
-import { useEffect } from "react";
 
 const ProductsPage = (props) => {
     useEffect(() => {
@@ -27,9 +27,11 @@ const ProductsPage = (props) => {
             <Header/>
             <div className="products-page-container">
                 { props.products ? props.products.map(product => (
-                    <div className="products-page-product">
-                        <ProductItem props={product} />
-                    </div>
+                    <Link to={"/products/" + product.slug} style={{textDecoration: "none"}}>
+                        <div className="products-page-product">
+                            <ProductItem props={product} />
+                        </div>
+                    </Link>
                 )) : null }
             </div>
         </div>

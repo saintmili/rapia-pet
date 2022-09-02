@@ -1,0 +1,21 @@
+.admin-products-table {
+    background-color: bisque;
+    width: 80vw;
+    height: 100vh;
+    border: 1px solid ;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-products-table td, .admin-products-table th {
+    border: 2px solid ;
+    margin: 0;
+    padding: 0;
+}
+.admin-products-table th {
+    background-color: red;
+}
+.admin-products-table tr {
+    margin: 0;
+    padding: 0;
+}

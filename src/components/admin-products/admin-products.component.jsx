@@ -4,27 +4,16 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { CustomButton } from "../custom-button/custom-button.component";
+import { getAllProducts, deleteProductById } from "../../api/products.api";
 
 import './admin-products.styles.css';
 
 const AdminProducts = () => {
     const [products, setProducts] = useState();
+    const params = ["آی دی", "عنوان", "نامک", "قیمت", ""]
     useEffect(() => {
-        try {
-            const baseUrl = "http://localhost:5000/api/v1/products"
-            fetch(baseUrl, {
-                method: "GET",
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    }
-            })
-                .then( res => res.json())
-                .then(data => setProducts(data))
-                .catch(err => console.error(err))
-        } catch (error) {
-            console.log(error);
-        }
+        getAllProducts()
+            .then(data => setProducts(data))
     }, [])
     return (
         <div className="admin-products">
@@ -32,31 +21,28 @@ const AdminProducts = () => {
             <table className="admin-products-table">
                 <thead>
                     <tr>
-                        <th>آی دی</th>
-                        <th>عنوان</th>
-                        <th>نامک</th>
-                        <th>قیمت</th>
+                        {params.map(param => <th key={param}>{param}</th>)}
                     </tr>
                 </thead>
-                {products ? products.map(product => {
-                    return (
-                        <tr>
-                            <td>{product.id}</td>
-                            <td>{product.title}</td>
-                            <td>{product.slug}</td>
-                            <td>{product.price}</td>
-                            <td>
-                                
-                            </td>
-                        </tr>
-                    )
-                }) : ""}
+                <tbody>
+                    {products ? products.map(product => {
+                        return (
+                            <tr key={product.id}>
+                                <td>{product.id}</td>
+                                <td>{product.title}</td>
+                                <td>{product.slug}</td>
+                                <td>{product.price}</td>
+                                <td>
+                                    <CustomButton backgroundColor="red" color="white" onClick={() => {deleteProductById(product.id)}}>حذف</CustomButton>
+                                    <CustomButton backgroundColor="yellow">ویرایش</CustomButton>
+                                </td>
+                            </tr>
+                        )
+                    }) : <tr></tr>}
+                </tbody>
                 <tfoot>
-                <tr>
-                        <th>آی دی</th>
-                        <th>عنوان</th>
-                        <th>نامک</th>
-                        <th>قیمت</th>
+                    <tr>
+                        {params.map(param => <th key={param}>{param}</th>)}
                     </tr>
                 </tfoot>
             </table>

@@ -14,6 +14,7 @@ export const CustomButton = (props) => {
                 marginTop: props.marginTop ? props.marginTop : 'none',
                 fontSize: props.fontSize ? props.fontSize : 'none',
             }}
+            onClick={props.onClick}
         >
                 {props.children}
         </button>

@@ -7,22 +7,15 @@ import { setProducts } from "../../redux/products/products.actions";
 import './productpage.styles.css';
 import Header from '../../components/header/header.component';
 import { CustomButton } from "../../components/custom-button/custom-button.component";
+import { getProductById } from "../../api/products.api";
 
 const ProductPage = props => {
     const params = useParams();
     const [product, setProduct] = useState(null);
     useEffect(() => {
         if (!props.products) {
-            const base_url = `http://localhost:5000/api/v1/products`;
-            fetch(base_url, {
-                method: "GET",
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    }
-                })
-                .then(res => res.json())
-                .then(data => setProduct(data.filter(product => product.slug === params.productSlug)[0]))
+            getProductById(product.id)
+                .then(data => setProduct(data))
         } else {
             setProduct(props.products.filter(product => product.slug === params.productSlug)[0])
         }

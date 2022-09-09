@@ -3,6 +3,7 @@ import { connect } from "react-redux/es/exports";
 import { Link } from "react-router-dom";
 
 import { setProducts } from "../../redux/products/products.actions";
+import { getAllProducts } from "../../api/products.api";
 
 import Header from "../../components/header/header.component";
 import ProductItem from "../../components/product-item/product-item.component";
@@ -10,15 +11,7 @@ import './productspage.styles.css';
 
 const ProductsPage = (props) => {
     useEffect(() => {
-        const base_url = "http://localhost:5000/api/v1/products";
-        fetch(base_url, {
-            method: "GET",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(res => res.json())
+        getAllProducts()
             .then(data => props.setProducts(data))
     }, [])
 

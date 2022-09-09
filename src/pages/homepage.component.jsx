@@ -165,17 +165,20 @@ const HomePage = (props) => {
         <div className="homepage">
             <Header />
             <section className='section-1'>
-                <div className='section-1-title'>
-                    <h1>رآبیا<span>پت</span>:</h1>
-                    <h2><span>دامپزشکی</span> و <span>پت شاپ</span> آنلاین</h2>
-                </div>
-                <div className='section-1-content'>
-                    <p>لوازم ضروری و غیر ضروری سگ رو با بهترین قیمت در رآبیاپت پیدا کنید و بخرید</p>
-                    <div className="section-1-btns">
-                        <Link to="/products" style={{textDecoration: "none"}}><CustomButton backgroundColor='var(--color-blue-primary)' color='var(--color-white-original)'><img src={product} alt="product" style={{width: "1vw", height: "1vw", marginLeft: "0.5vw"}} />مشاهده محصولات</CustomButton></Link>
-                        <CustomButton backgroundColor='var(--color-black-primary)' color='var(--color-white-original)'><img src={vet} alt="vet" style={{width: "1vw", height: "1vw", marginLeft: "0.5vw", color: "var(--color-white-original)"}} />رزرو نوبت پزشکی</CustomButton>
+                <div className="sec-1">
+                    <div className='section-1-title'>
+                        <h1>رآبیا<span>پت</span>:</h1>
+                        <h2><span>دامپزشکی</span> و <span>پت شاپ</span> آنلاین</h2>
+                    </div>
+                    <div className='section-1-content'>
+                        <p>لوازم ضروری و غیر ضروری سگ رو با بهترین قیمت در رآبیاپت پیدا کنید و بخرید</p>
+                        <div className="section-1-btns">
+                            <Link to="/products" style={{textDecoration: "none"}}><CustomButton backgroundColor='var(--color-blue-primary)' color='var(--color-white-original)' overBackgroundColor="red"><img src={product} alt="product" style={{width: "1vw", height: "1vw", marginLeft: "0.5vw"}} />مشاهده محصولات</CustomButton></Link>
+                            <CustomButton backgroundColor='var(--color-black-primary)' color='var(--color-white-original)' ><img src={vet} alt="vet" style={{width: "1vw", height: "1vw", marginLeft: "0.5vw", color: "var(--color-white-original)"}} />رزرو نوبت پزشکی</CustomButton>
+                        </div>
                     </div>
                 </div>
+                
                 <img className='section-1-img' src={pou} alt='pet' />
             </section>
             <Category type="a"/>

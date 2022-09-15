@@ -7,19 +7,19 @@ import { setProducts } from "../../redux/products/products.actions";
 import './productpage.styles.css';
 import Header from '../../components/header/header.component';
 import { CustomButton } from "../../components/custom-button/custom-button.component";
-import { getProductBySlug } from "../../api/products.api";
+import { getProductById } from "../../api/products.api";
 
 const ProductPage = props => {
     const params = useParams();
     const [product, setProduct] = useState(null);
-
     useEffect(() => {
-        if (!product) {
-            getProductBySlug(params.productSlug)
+        if (!props.products) {
+            getProductById(product.id)
                 .then(data => setProduct(data))
+        } else {
+            setProduct(props.products.filter(product => product.slug === params.productSlug)[0])
         }
     }, [])
-
     return (
         <div className="product-page">
             <Header />

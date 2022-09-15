@@ -9,7 +9,6 @@ import './header.styles.css';
 const Header = ({ currentUser }) => {
     return (
         <header className='header'>
-            {console.log(currentUser)}
             <NavBar />
             <Menu />
         </header>

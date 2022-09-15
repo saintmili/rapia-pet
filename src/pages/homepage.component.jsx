@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import Category from "../components/category/category.component";
 import Offer from "../components/offer/offer.component";
-import Header from "../components/header/header.component";
 import { CustomButton } from "../components/custom-button/custom-button.component";
 import pou from '../assets/pou.svg';
 import product from '../assets/products.svg';
@@ -137,7 +136,6 @@ const newProducts = [
 const HomePage = (props) => {
     return (
         <div className="homepage">
-            <Header />
             <section className='section-1'>
                 <div className='section-1-title'>
                     <h1>رآبیا<span>پت</span>:</h1>

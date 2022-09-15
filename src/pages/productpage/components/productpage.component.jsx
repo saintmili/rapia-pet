@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
 
 import '../styles/productpage.styles.css';
-import Header from '../../../components/header/header.component';
 import { CustomButton } from "../../../components/custom-button/custom-button.component";
 import { getProductBySlug } from "../../../api/products.api";
 import ProductReview from "./product-review.component";
@@ -58,7 +57,6 @@ const ProductPage = () => {
 
     return (
         <div className="product-page">
-            <Header />
             <div className="product-page-container">
                 <div className="game-page-header">
                     <div className="product-page-header-img-container"></div>

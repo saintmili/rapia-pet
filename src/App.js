@@ -1,6 +1,9 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
+import Header from './components/header/header.component';
+import Footer from './components/footer';
+
 import HomePage from './pages/homepage.component';
 import ProductsPage from './pages/productspage/productspage.component';
 import ProductPage from './pages/productpage';
@@ -12,6 +15,7 @@ import LogoutPage from './pages/logoutpage/logoutpage.component';
 function App() {
   return (
     <div className='rabia-pet'>
+      <Header />
       <Routes >
         <Route exact path='/' element={<HomePage />} />
         <Route exact path='/products' element={<ProductsPage />} />
@@ -21,6 +25,7 @@ function App() {
         <Route path='/login' element={<LoginPage />} />
         <Route path='/logout' element={<LogoutPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

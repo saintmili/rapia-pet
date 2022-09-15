@@ -14,11 +14,14 @@ const LoginPage = (props) => {
     const navigate = useNavigate()
 
     const loginHandler = () => {
-        console.log(id, password);
         login(parseInt(id), password)
             .then((data) => {
-                props.setCurrentUser(data);
-                navigate("/", {replace: true});
+                if (data.status === "ok") {
+                    props.setCurrentUser(data.data);
+                    navigate("/", {replace: true});
+                } else {
+                    console.log(data.data);
+                }
             })
             .catch(err => console.error(err))
     }
@@ -39,11 +42,7 @@ const LoginPage = (props) => {
     )
 }
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
-})
-
 const mapDispatchToProps = dispatch => ({
     setCurrentUser: currentUser => dispatch(setCurrentUser(currentUser))
 })
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
+export default connect(null, mapDispatchToProps)(LoginPage);

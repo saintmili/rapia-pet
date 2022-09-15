@@ -52,9 +52,11 @@ export const NavBar = (props) => {
             <div className="navbar-phone-text">09170340270</div>
             <img src={phone} alt="phone" />
           </div>
-          <div className="navbar-profile">
-            <img src={profile} alt="profile" />
-          </div>
+          <Link to="/login">
+            <div className="navbar-profile">
+              <img src={profile} alt="profile" />
+            </div>
+          </Link>
           <div className="navbar-cart">
             <img src={cart} alt="cart" />
           </div>

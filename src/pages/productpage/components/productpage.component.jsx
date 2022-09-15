@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
-import { connect } from "react-redux/es/exports";
-
-import { setProducts } from "../../../redux/products/products.actions";
 
 import '../styles/productpage.styles.css';
 import Header from '../../../components/header/header.component';
 import { CustomButton } from "../../../components/custom-button/custom-button.component";
-import { getProductById } from "../../../api/products.api";
+import { getProductBySlug } from "../../../api/products.api";
 import ProductReview from "./product-review.component";
 import Category from "../../../components/category/category.component";
 
 
-const ProductPage = props => {
+const ProductPage = () => {
     const menuItems = [
         {
             id: 1,
@@ -43,13 +40,10 @@ const ProductPage = props => {
     const [product, setProduct] = useState(null);
     const [selectedMenu, setSelectedMenu] = useState(menuItems[0])
 
-
     useEffect(() => {
-        if (!props.products) {
-            getProductById(product.id)
+        if (!product) {
+            getProductBySlug(params.productSlug)
                 .then(data => setProduct(data))
-        } else {
-            setProduct(props.products.filter(product => product.slug === params.productSlug)[0])
         }
     }, [])
 
@@ -133,12 +127,4 @@ const ProductPage = props => {
     )
 }
 
-const mapStateToProps = state => ({
-    products: state.products.products
-});
-
-const mapDispatchToProps = dispatch => ({
-    setProducts: products => dispatch(setProducts(products)) 
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);
+export default ProductPage;

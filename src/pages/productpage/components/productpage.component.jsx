@@ -9,6 +9,7 @@ import Header from '../../../components/header/header.component';
 import { CustomButton } from "../../../components/custom-button/custom-button.component";
 import { getProductById } from "../../../api/products.api";
 import ProductReview from "./product-review.component";
+import Category from "../../../components/category/category.component";
 
 
 const ProductPage = props => {
@@ -122,6 +123,10 @@ const ProductPage = props => {
                     <div className="product-page-menu-container">
                         {renderMenuSwitch()}
                     </div>
+                </div>
+                <div className="product-page-banner"></div>
+                <div className="related-products">
+                    <Category type="c" title="محصولات مرتبط"/>
                 </div>
             </div>
         </div>

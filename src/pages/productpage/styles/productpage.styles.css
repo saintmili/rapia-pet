@@ -51,3 +51,9 @@
     justify-content: center;
     align-items: center;
 }
+.product-page-banner {
+    margin: auto;
+    width: 70%;
+    height: 20vh;
+    background-color: black;
+}

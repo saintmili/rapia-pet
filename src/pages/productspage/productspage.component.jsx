@@ -20,7 +20,7 @@ const ProductsPage = (props) => {
             <Header/>
             <div className="products-page-container">
                 { props.products ? props.products.map(product => (
-                    <Link to={"/products/" + product.slug} style={{textDecoration: "none"}}>
+                    <Link to={"/products/" + product.slug} style={{textDecoration: "none"}} key={product.id} >
                         <div className="products-page-product">
                             <ProductItem props={product} />
                         </div>

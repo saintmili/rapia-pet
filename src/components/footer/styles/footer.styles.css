@@ -1,7 +1,6 @@
 .footer {
     display: flex;
     flex-wrap: wrap;
-    /* height: 60vh; */
     background-color: var(--color-blue-primary);
     border-radius: 6vw 6vw 0 0 / 3vw 3vw 0 0;
     padding: 2vw 0 0 0;
@@ -11,6 +10,8 @@
     padding: 0 4vw;
 }
 .footer-menu {
+    padding-left: 0;
+    padding-right: 6vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -19,9 +20,15 @@
     font-size: 1vw;
 }
 .footer-socialmedia {
-    width: 40%;
-    height: 10%;
-    background-color: aqua;
+    padding-right: 0;
+    padding-left: 6vw;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-socialmedia > img {
+    width: 2vw;
+    height: 2vw;
 }
 .footer-container {
     display: flex;
@@ -31,6 +38,7 @@
     background-color: #fff;
     border-radius: 7vw 7vw 0 0 / 4vw 4vw 0 0;
     padding: 4vw 8vw 0 8vw;
+    margin-top: 1vw;
 }
 .footer-benefits {
     width: 20%;
@@ -49,9 +57,9 @@
     height: 2vw;
 }
 .footer-aboutus {
-    /* display: flex;
-    flex-direction: column; */
-    /* gap: 2vw; */
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
     width: 60%;
 }
 .footer-aboutus-links {

@@ -5,6 +5,11 @@ import Benefits1 from "../../../assets/imgs/benefits/benefits1.svg";
 import FooterPhone from "../../../assets/imgs/footer-phone.svg";
 import FooterLocation from "../../../assets/imgs/footer-location.svg";
 import SitechLogo from "../../../assets/imgs/sitech-logo.svg";
+import Whatsapp from "../../../assets/imgs/whatsapp.svg";
+import Telegram from "../../../assets/imgs/telegram.svg";
+import Twitter from "../../../assets/imgs/twitter.svg";
+import Pinterest from "../../../assets/imgs/pinterest.svg";
+import Instagram from "../../../assets/imgs/instagram.svg";
 
 const footerMenuItems = [
     {
@@ -66,7 +71,13 @@ const Footer = () => {
                     </div>
                 ))}
             </div>
-            <div className="footer-socialmedia"></div>
+            <div className="footer-socialmedia">
+                <img src={Pinterest} alt="" />
+                <img src={Twitter} alt="" />
+                <img src={Telegram} alt="" />
+                <img src={Whatsapp} alt="" />
+                <img src={Instagram} alt="" />
+            </div>
             <div className="footer-container">
                 <div className="footer-benefits">
                     {footerBenefits.map(benefit => (

@@ -10,31 +10,38 @@ import Telegram from "../../../assets/imgs/telegram.svg";
 import Twitter from "../../../assets/imgs/twitter.svg";
 import Pinterest from "../../../assets/imgs/pinterest.svg";
 import Instagram from "../../../assets/imgs/instagram.svg";
+import { Link } from "react-router-dom";
 
 const footerMenuItems = [
     {
         id: 1,
-        data: "خانه"
+        data: "خانه",
+        route: "/"
     },
     {
         id: 2,
-        data: "فروشگاه"
+        data: "فروشگاه",
+        route: "/shop"
     },
     {
         id: 3,
-        data: "وبلاگ"
+        data: "وبلاگ",
+        route: "/blog"
     },
     {
         id: 4,
-        data: "درباره ما"
+        data: "درباره ما",
+        route: "/about"
     },
     {
         id: 5,
-        data: "تماس با ما"
+        data: "تماس با ما",
+        route: "/contact"
     },
     {
         id: 6,
-        data: "حساب کاربری"
+        data: "حساب کاربری",
+        route: "/"
     },
 ]
 const footerBenefits = [
@@ -66,9 +73,9 @@ const Footer = () => {
         <div className="footer">
             <div className="footer-menu">
                 {footerMenuItems.map(item => (
-                    <div className="footer-menu-item" key={item.id}>
+                    <Link to={item.route} className="footer-menu-item" key={item.id} style={{all: "unset"}}>
                         {item.data}
-                    </div>
+                    </Link>
                 ))}
             </div>
             <div className="footer-socialmedia">

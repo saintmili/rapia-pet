@@ -11,6 +11,7 @@ import AdminPage from './pages/adminpage/adminpage.component';
 import AdminProductPage from './pages/adminproductpage/admin-product.component';
 import LoginPage from './pages/loginpage/loginpage.component';
 import LogoutPage from './pages/logoutpage/logoutpage.component';
+import BlogPage from './pages/blogpage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/admin/product' element={<AdminProductPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/logout' element={<LogoutPage />} />
+        <Route path='/blog' element={<BlogPage />} />
       </Routes>
       <Footer />
     </div>

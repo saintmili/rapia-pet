@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { setProducts } from "../../redux/products/products.actions";
 import { getAllProducts } from "../../api/products.api";
 
-import Header from "../../components/header/header.component";
 import ProductItem from "../../components/product-item/product-item.component";
 import './productspage.styles.css';
 
@@ -17,7 +16,6 @@ const ProductsPage = (props) => {
 
     return (
         <div>
-            <Header/>
             <div className="products-page-container">
                 { props.products ? props.products.map(product => (
                     <Link to={"/products/" + product.slug} style={{textDecoration: "none"}} key={product.id} >

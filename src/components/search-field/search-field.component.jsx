@@ -13,7 +13,7 @@ export const SearchField = ({placeholder}) => {
                 placeholder={placeholder}
             />
             <div className="search-btn">
-                <img src={search} alt="search" />
+                <img src={search} alt="search-icon" />
             </div>
         </div>
     )

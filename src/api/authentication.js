@@ -1,6 +1,8 @@
+import { SERVER_ADDRESS } from ".";
+
 export const login = (id, password) => {
     try {
-        const baseUrl = "http://localhost:5000/api/v1/auth/login";
+        const baseUrl = SERVER_ADDRESS + "/api/v1/auth/login";
         return fetch(baseUrl, {
             method: "POST",
                 headers: {

@@ -1,6 +1,8 @@
+import { SERVER_ADDRESS } from ".";
+
 export const getAllProducts = () => {
     try {
-        const baseUrl = "http://localhost:5000/api/v1/products";
+        const baseUrl = SERVER_ADDRESS + "/api/v1/products";
         return fetch(baseUrl, {
             method: "GET",
                 headers: {

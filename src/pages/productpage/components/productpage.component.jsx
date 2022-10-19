@@ -44,7 +44,8 @@ const ProductPage = () => {
             getProductBySlug(params.productSlug)
                 .then(data => setProduct(data))
         }
-    })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const renderMenuSwitch = () => {
         switch (selectedMenu.id) {

@@ -5,6 +5,7 @@
     border: 1px solid ;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .admin-products-table td, .admin-products-table th {

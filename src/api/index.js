@@ -1,0 +1,1 @@
+export const SERVER_ADDRESS = "https://ecommerce-backend-production-2886.up.railway.app";

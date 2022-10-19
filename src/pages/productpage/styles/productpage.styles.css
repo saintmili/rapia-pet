@@ -38,11 +38,22 @@
 .product-page-header-cart-container-addtocart {
     margin: auto;
 }
-.product-page-menu {
+.product-page-menu-items {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .product-page-menu-item {
     margin: 0 1vw;
+}
+.product-page-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-page-banner {
+    margin: auto;
+    width: 70%;
+    height: 20vh;
+    background-color: black;
 }

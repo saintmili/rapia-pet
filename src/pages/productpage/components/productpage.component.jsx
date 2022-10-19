@@ -1,28 +1,63 @@
 import React, { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
-import { connect } from "react-redux/es/exports";
 
-import { setProducts } from "../../redux/products/products.actions";
+import '../styles/productpage.styles.css';
+import { CustomButton } from "../../../components/custom-button/custom-button.component";
+import { getProductBySlug } from "../../../api/products.api";
+import ProductReview from "./product-review.component";
+import Category from "../../../components/category/category.component";
 
-import './productpage.styles.css';
-import Header from '../../components/header/header.component';
-import { CustomButton } from "../../components/custom-button/custom-button.component";
-import { getProductById } from "../../api/products.api";
 
-const ProductPage = props => {
+const ProductPage = () => {
+    const menuItems = [
+        {
+            id: 1,
+            name: "بررسی محصول"
+        },
+        {
+            id: 2,
+            name: "بررسی ویدیویی"
+        },
+        {
+            id: 3,
+            name: "ویژگی ها"
+        },
+        {
+            id: 4,
+            name: "ترکیبات محصول"
+        },
+        {
+            id: 5,
+            name: "نظرات کاربران"
+        },
+        {
+            id: 6,
+            name: "پرسش و پاسخ"
+        },
+    ]
     const params = useParams();
     const [product, setProduct] = useState(null);
+    const [selectedMenu, setSelectedMenu] = useState(menuItems[0])
+
     useEffect(() => {
-        if (!props.products) {
-            getProductById(product.id)
+        if (!product) {
+            getProductBySlug(params.productSlug)
                 .then(data => setProduct(data))
-        } else {
-            setProduct(props.products.filter(product => product.slug === params.productSlug)[0])
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
+    const renderMenuSwitch = () => {
+        switch (selectedMenu.id) {
+            case 1:
+                return <ProductReview />
+            default:
+                return
+        }
+    }
+
     return (
         <div className="product-page">
-            <Header />
             <div className="product-page-container">
                 <div className="game-page-header">
                     <div className="product-page-header-img-container"></div>
@@ -70,42 +105,25 @@ const ProductPage = props => {
                     </div>
                 </div>
                 <div className="product-page-menu">
-                    <div className="product-page-menu-item">
-                        <span className="product-page-menu-item-icon"></span>    
-                        <span className="product-page-menu-item-text">بررسی محصول</span>    
-                    </div> |
-                    <div className="product-page-menu-item">
-                        <span className="product-page-menu-item-icon"></span>    
-                        <span className="product-page-menu-item-text">بررسی ویدیویی</span> 
-                    </div> |
-                    <div className="product-page-menu-item">
-                        <span className="product-page-menu-item-icon"></span>    
-                        <span className="product-page-menu-item-text">ویژگی ها</span> 
-                    </div> |
-                    <div className="product-page-menu-item">
-                        <span className="product-page-menu-item-icon"></span>    
-                        <span className="product-page-menu-item-text">ترکیبات محصول</span> 
-                    </div> |
-                    <div className="product-page-menu-item">
-                        <span className="product-page-menu-item-icon"></span>    
-                        <span className="product-page-menu-item-text">نظرات کاربران</span> 
-                    </div> |
-                    <div className="product-page-menu-item">
-                        <span className="product-page-menu-item-icon"></span>    
-                        <span className="product-page-menu-item-text">پرسش و پاسخ</span> 
+                    <div className="product-page-menu-items">
+                        {menuItems.map(menu => (
+                            <div className="product-page-menu-item" key={menu.id} onClick={() => setSelectedMenu(menu)}>
+                                <span className="product-page-menu-item-icon"></span>    
+                                <span className="product-page-menu-item-text">{menu.name}</span>    
+                            </div>
+                        ))}
                     </div>
+                    <div className="product-page-menu-container">
+                        {renderMenuSwitch()}
+                    </div>
+                </div>
+                <div className="product-page-banner"></div>
+                <div className="related-products">
+                    <Category type="c" title="محصولات مرتبط"/>
                 </div>
             </div>
         </div>
     )
 }
 
-const mapStateToProps = state => ({
-    products: state.products.products
-});
-
-const mapDispatchToProps = dispatch => ({
-    setProducts: products => dispatch(setProducts(products)) 
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);
+export default ProductPage;

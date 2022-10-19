@@ -1,17 +1,13 @@
 import React from "react";
-import { connect } from "react-redux";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Category from "../components/category/category.component";
 import Offer from "../components/offer/offer.component";
-import Header from "../components/header/header.component";
 import { CustomButton } from "../components/custom-button/custom-button.component";
 import pou from '../assets/pou.svg';
 import product from '../assets/products.svg';
 import vet from '../assets/vet.svg';
 import img1 from '../assets/img1.png';
-import { setCurrentUser } from "../redux/user/user.actions";
 
 import './homepage.styles.css';
 
@@ -138,32 +134,8 @@ const newProducts = [
 ];
 
 const HomePage = (props) => {
-    // const { setCurrentUser } = props.setCurrentUser
-
-    useEffect(() => {
-        const baseURL = 'http://localhost:5000/api/v1/auth/login';
-        fetch(baseURL, {
-            method: "POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: "test",
-                password: "test"
-            })
-        })
-            .then(resp => resp.json())
-            .then(data => displayData(data));
-
-        function displayData(data) {
-            props.setCurrentUser(data)
-        }
-    })
-
     return (
         <div className="homepage">
-            <Header />
             <section className='section-1'>
                 <div className="sec-1">
                     <div className='section-1-title'>
@@ -204,8 +176,5 @@ const HomePage = (props) => {
     );
 }
 
-const mapDispatchToProps = dispach => ({
-    setCurrentUser: user => dispach(setCurrentUser(user))
-})
 
-export default connect(null, mapDispatchToProps)(HomePage);
+export default HomePage;

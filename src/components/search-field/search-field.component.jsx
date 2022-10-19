@@ -49,7 +49,7 @@ export const SearchField = ({placeholder}) => {
                 onChange={(e) => setInputValue(e.target.value === "" ? null : e.target.value)} 
             />
             <div className="search-btn">
-                <img src={search} alt="search-icon" />
+                <img src={search} alt="search" />
             </div>
 
             {
@@ -60,7 +60,7 @@ export const SearchField = ({placeholder}) => {
                             <div>{product.title}</div>
                             <div>{product.price}</div>
                             </div>
-                            <img src={product.img}></img>
+                            <img src={product.img} alt="product"></img>
                            
 
                         </div> :

@@ -6,7 +6,6 @@
     width: 15vw;
     height: 2vw;
     border-radius: 0.5vw;
-    overflow: hidden;
     filter: drop-shadow(0 0 0.2vw rgb(180, 180, 180));
 }
 
@@ -41,4 +40,17 @@
 .search-btn * {
     width: 80%;
     height: 80%;
+}
+
+.search-result-box {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(250, 0, 0);
+    border-radius: 15px;
+    padding: 1.5%;
+    position: absolute;
+    top: 100%;
+    margin-top: 10px;
+    z-index: 999;
+    
 }

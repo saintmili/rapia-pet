@@ -13,6 +13,7 @@ import LoginPage from './pages/loginpage';
 import LogoutPage from './pages/logoutpage/logoutpage.component';
 import BlogPage from './pages/blogpage';
 import RegisterPage from './pages/registerpage';
+import ProfilePage from './pages/profilepage';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/logout' element={<LogoutPage />} />
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/blog' element={<BlogPage />} />
+        <Route path='/profile' element={<ProfilePage />} />
       </Routes>
       <Footer />
     </div>

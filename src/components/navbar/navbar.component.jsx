@@ -49,7 +49,7 @@ export const NavBar = (props) => {
         <div className="navbar-section-left">
           <SearchField placeholder='جستجو: غذا خشک سگ' />
           <div className="navbar-phone">
-            <div className="navbar-phone-text">09170340270</div>
+            <a href="tel:09170340270">09170340270</a>
             <img src={phone} alt="phone"  className="phone-icon" />
           </div>
           <Link to="/login">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux/es/exports";
 
 import Category from "../components/category/category.component";
 import Offer from "../components/offer/offer.component";
@@ -134,6 +135,7 @@ const newProducts = [
 ];
 
 const HomePage = (props) => {
+    // console.log(props.mediaQuery);
     return (
         <div className="homepage">
             <section className='section-1'>
@@ -176,5 +178,8 @@ const HomePage = (props) => {
     );
 }
 
+const mapStateToProps = state => ({
+    mediaQuery: state.mediaQuery.mediaQuery
+})
 
-export default HomePage;
+export default connect(mapStateToProps)(HomePage);

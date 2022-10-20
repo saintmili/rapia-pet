@@ -8,14 +8,53 @@
 .navbar-vet, .navbar-train, .navbar-grooming {
     display: flex;
     align-items: center;
-    background-color: var(--color-white-original);
-    font-size: 0.9vw;
-    filter: drop-shadow(0 0 0.2vw rgb(180, 180, 180));
-    border-radius: 0.5vw;
-    width: 11vw;
-    height: 2vw;
-    padding: 0 0.3vw;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 12px;
+    width: auto;
+    padding: 0.5rem;
 }
+
+/* style box navbar vet */
+
+.navbar-vet {
+    color: var(--color-green-primary);
+    background-color: var(--color-green-btn-primary);
+
+}
+
+.navbar-vet:hover{
+    color: var(--color-blue-primary);
+    transition: 0.5s;
+}
+
+/* style box navbar train */
+
+.navbar-train {
+    color: var(--color-orange-primary);
+    background-color: var(--color-green-btn-orange);
+}
+
+.navbar-train:hover {
+    color: var(--color-blue-primary);
+    transition: 0.5s;
+}
+
+/* style box  navbar grooming */
+
+.navbar-grooming {
+    color: var(--color-lightblue-primary);
+    background-color: var(--color-lightblue-btn-primary);
+}
+
+.navbar-grooming:hover {
+    color: var(--color-blue-primary);
+    transition: 0.5s;
+}
+
+
+
+
 
 
 .navbar-vet, .navbar-train, .navbar-grooming {
@@ -71,7 +110,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: drop-shadow(0 0 0.2vw rgb(180, 180, 180));
     margin-right: 1vw;
 }
 
@@ -90,3 +128,62 @@
     height: 1vw;
     margin-right: 0.5vw;
 }
+
+
+/* media queries */ 
+
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    .navbar-vet, .navbar-train, .navbar-grooming {
+        font-size: 0.7rem;
+
+    }
+
+    .navbar-phone {
+        width: max-content;
+        padding: 0.8rem 0.3rem;
+        border-radius: 5px;
+    }
+
+    .navbar-phone-text {
+        font-size: 0.7rem;
+    }
+
+        .phone-icon {
+            height: 1.5rem;
+            width: 0.8rem;
+        }
+    
+
+    
+  }
+  
+
+  /* Tablet*/
+
+
+
+  /* MOBILE */
+
+  @media (min-width: 320px) and (max-width: 480px) {
+  
+   .navbar {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+    .navbar-section-right {
+    display: none;
+    visibility: hidden;
+}
+    
+  }
+
+  /* Mobile */
+
+
+
+  

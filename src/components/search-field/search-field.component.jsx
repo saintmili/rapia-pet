@@ -60,7 +60,7 @@ export const SearchField = ({placeholder}) => {
                             <div>{product.title}</div>
                             <div>{product.price}</div>
                             </div>
-                            <img src={product.img}></img>
+                            <img src={product.img} alt="product"></img>
                            
 
                         </div> :

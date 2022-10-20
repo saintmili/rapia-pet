@@ -5,8 +5,15 @@
   --color-white-secondary: #f9f9f9;
   --color-white-original: #ffffff;
   --color-orange-primary: #F96120;
+  --color-lightblue-primary:#1E88C7;
   --color-black-primary: #000000;
   --color-gray-primary: #A8a8a8a8;
+  --color-green-btn-primary:  rgba(27, 161, 7, 0.03);
+  --color-green-btn-orange:  rgba(249, 97, 32, 0.03);
+  --color-lightblue-btn-primary :rgba(30, 136, 199, 0.03);
+  --color-white-bg-box-primary :rgba(81, 47, 255, 0.03);
+  
+
 }
 .rabia-pet {
   direction: rtl;

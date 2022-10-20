@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { SearchField } from "../search-field/search-field.component";
-import logo from "../../assets/logo.svg";
+import logoHeader from "../../assets/logo-rabia.png";
 import profile from "../../assets/profile.svg";
 import cart from "../../assets/cart.svg";
 import phone from "../../assets/phone.svg";
@@ -20,9 +20,9 @@ export const NavBar = (props) => {
             <div className="navbar-vet-img">
               <img src={vet} alt="vet" />
             </div>
-            <div>
+            <p  >
               مشاوره دامپزشکی
-            </div>
+            </p>
           </div>
           <div className="navbar-train">
             <div className="navbar-train-img">
@@ -43,14 +43,14 @@ export const NavBar = (props) => {
         </div>
         <div className="navbar-section-center">
           <Link to="/">
-            <img src={logo} alt="logo" className='logo' />
+            <img src={logoHeader} alt="logo" className='logo-header' />
           </Link>
         </div>
         <div className="navbar-section-left">
           <SearchField placeholder='جستجو: غذا خشک سگ' />
           <div className="navbar-phone">
             <div className="navbar-phone-text">09170340270</div>
-            <img src={phone} alt="phone" />
+            <img src={phone} alt="phone"  className="phone-icon" />
           </div>
           <Link to="/login">
             <div className="navbar-profile">

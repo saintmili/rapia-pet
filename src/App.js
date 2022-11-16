@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/header.component';
@@ -17,19 +18,19 @@ import ProfilePage from './pages/profilepage';
 
 function App() {
   return (
-    <div className='rabia-pet'>
+    <div className="rabia-pet">
       <Header />
-      <Routes >
-        <Route exact path='/' element={<HomePage />} />
-        <Route exact path='/products' element={<ProductsPage />} />
-        <Route path='/products/:productSlug' element={<ProductPage />} />
-        <Route path='/admin' element={<AdminPage />} />
-        <Route path='/admin/product' element={<AdminProductPage />} />
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/logout' element={<LogoutPage />} />
-        <Route path='/register' element={<RegisterPage />} />
-        <Route path='/blog' element={<BlogPage />} />
-        <Route path='/profile' element={<ProfilePage />} />
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/products" element={<ProductsPage />} />
+        <Route path="/products/:productSlug" element={<ProductPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/admin/product" element={<AdminProductPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/logout" element={<LogoutPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
       <Footer />
     </div>

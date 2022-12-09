@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux/es/exports";
-import Category from "../../../components/category/category.component";
-import Offer from "../../../components/offer/offer.component";
-import { CustomButton } from "../../../components/custom-button/custom-button.component";
+import Category from "../../../components/category";
+import Offer from "../../../components/offer";
+import CustomButton from "../../../components/custom-button";
 import pou from "../../../assets/pou.svg";
 import product from "../../../assets/products.svg";
 import vet from "../../../assets/vet.svg";
 import img1 from "../../../assets/img1.png";
 
 import "../styles/homepage.styles.css";
-import Header from "../../../components/header/header.component";
-import Footer from "../../../components/footer";
+import Header from "../../../components/header";
+import Footer from "@/components/footer";
 
 const discounts = [
   {

@@ -1,22 +1,22 @@
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import { CustomButton } from '../custom-button/custom-button.component';
-import { getAllProducts, deleteProductById } from '../../api/products.api';
+import CustomButton from "../custom-button";
+import { getAllProducts, deleteProductById } from "../../api/products.api";
 
-import './admin-products.styles.css';
+import "./admin-products.styles.css";
 
 const AdminProducts = () => {
   const [products, setProducts] = useState();
-  const params = ['آی دی', 'عنوان', 'نامک', 'قیمت', ''];
+  const params = ["آی دی", "عنوان", "نامک", "قیمت", ""];
   useEffect(() => {
     getAllProducts().then((data) => setProducts(data));
   }, []);
   return (
     <div className="admin-products">
-      <Link to="/admin/product" style={{ textDecoration: 'none' }}>
+      <Link to="/admin/product" style={{ textDecoration: "none" }}>
         <CustomButton backgroundColor="#45ff45">افزودن محصول</CustomButton>
       </Link>
       <table className="admin-products-table">

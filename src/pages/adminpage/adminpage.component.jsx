@@ -2,8 +2,8 @@ import React from "react";
 
 import "./adminpage.styles.css";
 
-import Sidebar from "../../components/sidebar/sidebar.component";
-import AdminProducts from "../../components/admin-products/admin-products.component";
+import Sidebar from "../../components/sidebar";
+import AdminProducts from "../../components/admin-products";
 import { useState } from "react";
 
 const AdminPage = () => {

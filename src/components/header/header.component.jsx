@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 
-import { NavBar } from "../navbar/navbar.component";
-import { Menu } from "../menu/menu.component";
+import NavBar from "../navbar";
+import Menu from "../menu";
 
 import "./header.styles.css";
 import { UserContext } from "../../contexts/userContext";
-import { CustomButton } from "../custom-button/custom-button.component";
+import CustomButton from "../custom-button";
 import { Link } from "react-router-dom";
 
 const Header = () => {

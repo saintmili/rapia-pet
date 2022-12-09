@@ -1,15 +1,11 @@
-import React from "react";
-import { connect } from "react-redux";
-import { Navigate } from "react-router-dom"
-import { setCurrentUser } from "../../redux/user/user.actions";
+import React, { useContext } from "react";
+import { Navigate } from "react-router-dom";
+import { UserContext } from "../../contexts/userContext";
 
-const LogoutPage = props => {
-    props.setCurrentUser(null)
-    return <Navigate to="/" />
-}
+const LogoutPage = () => {
+  const { setUser } = useContext(UserContext);
+  setUser("");
+  return <Navigate to="/" />;
+};
 
-const mapDispatchToProps = dispatch => ({
-    setCurrentUser: currentUser => dispatch(setCurrentUser(currentUser))
-})
-
-export default connect(null, mapDispatchToProps)(LogoutPage);
+export default LogoutPage;

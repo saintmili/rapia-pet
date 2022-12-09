@@ -1,22 +1,28 @@
-import React from "react";
-import { connect } from "react-redux";
+import React, { useContext } from "react";
 
 import { NavBar } from "../navbar/navbar.component";
 import { Menu } from "../menu/menu.component";
 
-import './header.styles.css';
+import "./header.styles.css";
+import { UserContext } from "../../contexts/userContext";
+import { CustomButton } from "../custom-button/custom-button.component";
+import { Link } from "react-router-dom";
 
-const Header = ({ currentUser }) => {
-    return (
-        <header className='header'>
-            <NavBar />
-            <Menu />
-        </header>
-    )
-}
+const Header = () => {
+  const { user } = useContext(UserContext);
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
-})
+  return (
+    <header className="header">
+      {user && user.is_admin && (
+        <Link to={"/admin"}>
+          <CustomButton>adminPage</CustomButton>
+        </Link>
+      )}
+      <NavBar />
+      <Menu />
+    </header>
+  );
+};
 
-export default connect(mapStateToProps)(Header)
+export default Header;
+

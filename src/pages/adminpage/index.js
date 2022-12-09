@@ -1,3 +1,3 @@
-import AdminPage from "./adminpage.component.jsx";
+import AdminPage from "./components/AdminPage.component";
 
 export default AdminPage;

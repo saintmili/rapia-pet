@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux/es/exports";
 import Category from "../../../components/category";
 import Offer from "../../../components/offer";
-import CustomButton from "../../../components/custom-button";
+import CustomButton from "@/common/components/CustomButton";
 import pou from "../../../assets/pou.svg";
 import product from "../../../assets/products.svg";
 import vet from "../../../assets/vet.svg";

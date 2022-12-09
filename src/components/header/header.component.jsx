@@ -5,7 +5,7 @@ import Menu from "../menu";
 
 import "./header.styles.css";
 import { UserContext } from "../../contexts/userContext";
-import CustomButton from "../custom-button";
+import CustomButton from "@/common/components/CustomButton";
 import { Link } from "react-router-dom";
 
 const Header = () => {

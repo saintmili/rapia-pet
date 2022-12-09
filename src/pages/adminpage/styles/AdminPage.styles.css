@@ -1,0 +1,14 @@
+.adminpage{
+}
+.adminpage-sidebar {
+    width: 20vw;
+    height: 100vh;
+}
+.adminpage-content {
+  display: flex;
+}
+.sidebar-content {
+  width: 100%;
+  background-color: gray;
+  border-radius: 0 3vw 0 0;
+}

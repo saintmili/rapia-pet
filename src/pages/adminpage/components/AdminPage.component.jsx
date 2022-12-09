@@ -1,9 +1,10 @@
 import React from "react";
 
-import "./adminpage.styles.css";
+import "../styles/AdminPage.styles.css";
 
-import Sidebar from "../../components/sidebar";
-import AdminProducts from "../../components/admin-products";
+import AdminHeader from "./AdminHeader.component";
+import Sidebar from "@/components/sidebar";
+import AdminProducts from "@/components/admin-products";
 import { useState } from "react";
 
 const AdminPage = () => {
@@ -16,15 +17,17 @@ const AdminPage = () => {
 
   return (
     <div className="adminpage">
+      <AdminHeader />
+      <div className="adminpage-content">
       <div className="adminpage-sidebar">
         <Sidebar items={items} setSelectedItem={setSelectedItem} />
       </div>
-      <div className="adminpage-content">
+      <div className="sidebar-content">
         {selectedItem ? selectedItem.component : "no"}
+      </div>
       </div>
     </div>
   );
 };
 
 export default AdminPage;
-

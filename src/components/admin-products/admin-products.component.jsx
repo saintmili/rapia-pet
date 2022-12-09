@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import CustomButton from "../custom-button";
+import CustomButton from "@/common/components/CustomButton";
 import { getAllProducts, deleteProductById } from "../../api/products.api";
 
 import "./admin-products.styles.css";

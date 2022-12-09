@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./custom-button.styles.css";
+import "./CustomButton.styles.css";
 
 export const CustomButton = (props) => {
   const changeOverBackgroundColor = (e) => {

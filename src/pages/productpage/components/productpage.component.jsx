@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import "../styles/productpage.styles.css";
-import CustomButton from "../../../components/custom-button";
+import CustomButton from "@/common/components/CustomButton";
 import { getProductBySlug } from "../../../api/products.api";
 import ProductReview from "./product-review.component.jsx";
 import Category from "../../../components/category";

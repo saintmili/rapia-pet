@@ -3,5 +3,6 @@
     align-items: center;
     border: none;
     border-radius: 0.5vw;
-    padding: 0.5vw;
+    padding: 0.5vw 1vw;
+    width: fit-content;
 }

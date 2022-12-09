@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "@/assets/imgs/rabiapet-admin.svg";
-import Moon from "@/assets/imgs/moon.svg";
+import Logo from "@/assets/imgs/admin/rabiapet-admin.svg";
+import Moon from "@/assets/imgs/admin/moon.svg";
 
 import "../styles/AdminHeader.styles.css";
 import CustomButton from "@/common/components/CustomButton";

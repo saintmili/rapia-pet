@@ -18,6 +18,7 @@ export const CustomButton = (props) => {
         height: props.height ? props.height : "none",
         marginTop: props.marginTop ? props.marginTop : "none",
         fontSize: props.fontSize ? props.fontSize : "none",
+        ...props.style,
       }}
       onClick={props.onClick}
       onMouseOver={props.overBackgroundColor ? changeOverBackgroundColor : null}
@@ -29,4 +30,3 @@ export const CustomButton = (props) => {
     </button>
   );
 };
-

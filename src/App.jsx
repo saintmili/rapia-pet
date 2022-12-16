@@ -13,6 +13,8 @@ import RegisterPage from "./pages/registerpage";
 import ProfilePage from "./pages/profilepage";
 import { UserContext, UserProvider } from "./contexts/userContext";
 import AdminProtected from "./routes/AdminProtected";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 function App() {
   const { user } = useContext(UserContext);
@@ -20,6 +22,7 @@ function App() {
   return (
     <div className="rabia-pet">
       <UserProvider>
+        <Header />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/products" element={<ProductsPage />} />
@@ -39,6 +42,7 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>
+        <Footer />
       </UserProvider>
     </div>
   );

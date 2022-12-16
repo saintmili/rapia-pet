@@ -10,8 +10,6 @@ import vet from "../../../assets/vet.svg";
 import img1 from "../../../assets/img1.png";
 
 import "../styles/homepage.styles.css";
-import Header from "../../../components/header";
-import Footer from "@/components/footer";
 
 const discounts = [
   {
@@ -138,7 +136,6 @@ const newProducts = [
 const HomePage = () => {
   return (
     <>
-      <Header />
       <div className="homepage">
         <section className="section-1">
           <div className="sec-1">
@@ -234,7 +231,6 @@ const HomePage = () => {
         {/* <Category type="c" title="آخرین مقالات"/> */}
         <Offer title="آخرین محصولات" products={newProducts} />
       </div>
-      <Footer />
     </>
   );
 };

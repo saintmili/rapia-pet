@@ -1,2 +1,1 @@
-// export const SERVER_ADDRESS = "https://ecommerce-backend-production-2886.up.railway.app";
-export const SERVER_ADDRESS = "http://localhost:5000";
+export const SERVER_ADDRESS = "http://146.70.20.229:8080";

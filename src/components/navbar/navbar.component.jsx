@@ -44,7 +44,7 @@ export const NavBar = (props) => {
         <SearchField placeholder="جستجو: غذا خشک سگ" />
         <div className="navbar-phone">
           <div className="navbar-phone-text">09170340270</div>
-          <img src={phone} alt="phone" className="phone-icon" />
+          <div className="navbar-phone-img"><img src={phone} alt="phone" className="phone-icon"/></div>
         </div>
         <Link to="/login">
           <div className="navbar-profile">

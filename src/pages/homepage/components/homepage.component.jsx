@@ -179,9 +179,10 @@ const HomePage = () => {
                     src={vet}
                     alt="vet"
                     style={{
-                      width: "1vw",
-                      height: "1vw",
-                      marginLeft: "0.5vw",
+                      // position: "absolute",
+                      width: "1.5vw",
+                      height: "1.5vw",
+                      margin: "0 0.5vw",
                       color: "var(--color-white-original)",
                     }}
                   />

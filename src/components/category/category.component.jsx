@@ -25,7 +25,7 @@ export const Category = (props) => {
       id: 2,
     },
     {
-      title: "",
+      title: "توپ بازی",
       img: img3,
       id: 3,
     },

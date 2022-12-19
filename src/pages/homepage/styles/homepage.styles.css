@@ -7,14 +7,14 @@
     align-items: center;
 }
 .section-1-title > h1 {
-    font-size: 4vw;
+    font-size: 50px;
     margin-left: 0.5vw;
 }
 .section-1-title > h1 > span {
     color: var(--color-blue-primary);
 }
 .section-1-title > h2 {
-    font-size: 2vw;
+    font-size: 30px;
 }
 .section-1-title > h2 > span:first-of-type {
     color: var(--color-green-primary);

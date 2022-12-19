@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--color-blue-primary);
-    padding-top: 4vw;
+    padding-top: 2vw;
     padding-bottom: 2vw;
 }
 .menu-item {
@@ -13,4 +13,7 @@
 }
 .menu-item-title {
     color: var(--color-white-original);
+}
+.menu-item-dropdown {
+    margin-right: 0.4rem;
 }
